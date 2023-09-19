@@ -1,10 +1,11 @@
 class Zona():
 
-    _animales = []
+   # _animales = []
 
     def __init__(self, nombre, zoo=None):
         self._nombre = nombre
         self._zoo = zoo
+        self._animales = []
 
     def agregarAnimales(self, animal):
         self._animales.append(animal)
@@ -24,10 +25,10 @@ class Zona():
     def getZoo(self):
         return self._zoo
     
-    @classmethod
-    def setAnimales(cls, animales):
-        cls._animales = animales
+    #@classmethod
+    #def setAnimales(cls, animales):
+    #    cls._animales = animales
     
-    @classmethod
-    def getAnimales(cls):
-        return cls._animales
+    #@classmethod
+    #def getAnimales(cls):
+    #    return cls._animales
