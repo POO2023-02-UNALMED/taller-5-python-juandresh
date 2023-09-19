@@ -59,10 +59,8 @@ class Animal():
     def getGenero(self):
         return self._genero
     
-    @classmethod
-    def setZona(cls, zona):
-        cls._zona = zona
+    def setZona(self, zona):
+        self._zona = zona
     
-    @classmethod
-    def getZona(cls):
-        return cls._zona
+    def getZona(self):
+        return self._zona
