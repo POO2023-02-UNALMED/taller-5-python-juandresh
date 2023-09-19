@@ -14,13 +14,13 @@ class Animal():
 
     @staticmethod
     def totalPorTipo():
-        return(f'Mamíferos: {cantidadMamiferos()}\nAves: {cantidadAves()}\nReptiles: {cantidadReptiles()}\nPeces: {cantidadPeces()}\nAnfibios: {cantidadAnfibios()}')
+        return(f'Mamíferos: {zooAnimales.mamifero.Mamifero.cantidadMamiferos()}\nAves: {zooAnimales.ave.Ave.cantidadAves()}\nReptiles: {zooAnimales.reptil.Reptil.cantidadReptiles()}\nPeces: {zooAnimales.pez.Pez.cantidadPeces()}\nAnfibios: {zooAnimales.anfibio.Anfibio.cantidadAnfibios()}')
     
     def toString(self):
         if self._zona == None:
             return(f'Mi nombre es {self._nombre}, dengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}') 
         else:   
-            return(f'Mi nombre es {self._nombre}, dengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}, la zona en la que me ubico es {self._zona.getZona()}, en el {self._zona.getZona().getZoo()}')
+            return(f'Mi nombre es {self._nombre}, dengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}, la zona en la que me ubico es {self._zona.getZona()}, en el {self._zona.getZoo().getNombre()}')
     
     @classmethod
     def setTotalAnimales(cls, totalAnimales):
