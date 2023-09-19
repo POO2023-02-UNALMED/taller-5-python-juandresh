@@ -1,4 +1,3 @@
-from gestion.zona import Zona
 class Zoologico():
 
     _zonas=[]
@@ -6,11 +5,12 @@ class Zoologico():
     def __init__(self, nombre, ubicacion):
         self._nombre = nombre
         self._ubicacion = ubicacion
+        #self._zonas=[]
 
     def cantidadTotalAnimales(self):
         total=0
-        for Zona in self._zonas:
-            total += Zona.cantidadAnimales()
+        for zona in self._zonas:
+            total += zona.cantidadAnimales()
         return total
 
     def agregarZonas(self, zona):
@@ -31,13 +31,5 @@ class Zoologico():
     #def setZona(self, zona):
     #    self._zonas = zona
     
-    #def getZona(self):
-    #    return self._zonas
-    
-    @classmethod
-    def setZona(cls, zona):
-        cls._zona = zona
-
-    @classmethod
-    def getZona(cls):
-        return cls._zona
+    def getZona(self):
+        return self._zonas
