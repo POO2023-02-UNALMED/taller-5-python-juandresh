@@ -11,9 +11,9 @@ class Pez(Animal):
         self._colorEscamas = colorEscamas
         self._cantidadAletas = cantidadAletas
 
-    @staticmethod
-    def cantidadPeces():
-        return(len(Pez._listado))
+    @classmethod
+    def cantidadPeces(cls):
+        return(len(cls._listado))
     
     @classmethod
     def crearSalmon(cls, nombre, edad, genero):

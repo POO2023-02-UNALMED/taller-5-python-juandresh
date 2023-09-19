@@ -11,9 +11,9 @@ class Anfibio(Animal):
         self._colorPiel =colorPiel
         self._venenoso = venenoso
 
-    @staticmethod
-    def cantidadAnfibios():
-        return(len(Anfibio._listado))
+    @classmethod
+    def cantidadAnfibios(cls):
+        return(len(cls._listado))
     
     @classmethod
     def crearRana(cls, nombre, edad, genero):
