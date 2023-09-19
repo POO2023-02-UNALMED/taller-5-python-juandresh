@@ -14,10 +14,15 @@ class Animal():
 
     @staticmethod
     def totalPorTipo():
-        return(f'Mamíferos: {zooAnimales.mamifero.Mamifero.cantidadMamiferos()}\nAves: {zooAnimales.ave.Ave.cantidadAves()}\nReptiles: {zooAnimales.reptil.Reptil.cantidadReptiles()}\nPeces: {zooAnimales.pez.Pez.cantidadPeces()}\nAnfibios: {zooAnimales.anfibio.Anfibio.cantidadAnfibios()}')
+        mamiferos = zooAnimales.mamifero.Mamifero.cantidadMamiferos()
+        aves = zooAnimales.ave.Ave.cantidadAves()
+        reptiles = zooAnimales.reptil.Reptil.cantidadReptiles()
+        peces = zooAnimales.pez.Pez.cantidadPeces()
+        anfibios = zooAnimales.anfibio.Anfibio.cantidadAnfibios()
+        return(f'Mamíferos: {mamiferos}\nAves: {aves}\nReptiles: {reptiles}\nPeces: {peces}\nAnfibios: {anfibios}')
     
     def toString(self):
-        if self._zona == None:
+        if self._zona is None:
             return(f'Mi nombre es {self._nombre}, dengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}') 
         else:   
             return(f'Mi nombre es {self._nombre}, dengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}, la zona en la que me ubico es {self._zona.getZona()}, en el {self._zona.getZoo().getNombre()}')
