@@ -19,7 +19,7 @@ class Animal():
         reptiles = zooAnimales.reptil.Reptil.cantidadReptiles()
         peces = zooAnimales.pez.Pez.cantidadPeces()
         anfibios = zooAnimales.anfibio.Anfibio.cantidadAnfibios()
-        return(f'Mamíferos: {mamiferos}\nAves: {aves}\nReptiles: {reptiles}\nPeces: {peces}\nAnfibios: {anfibios}')
+        return(f'Mamiferos: {mamiferos}\nAves: {aves}\nReptiles: {reptiles}\nPeces: {peces}\nAnfibios: {anfibios}')
     
     def toString(self):
         if self._zona is None:
