@@ -18,11 +18,11 @@ class Animal():
     
     @classmethod
     def totalPorTipo(cls):
-        mamiferos = zooAnimales.Mamifero.cantidadMamiferos()
-        aves = zooAnimales.Ave.cantidadAves()
-        reptiles = zooAnimales.Reptil.cantidadReptiles()
-        peces = zooAnimales.Pez.cantidadPeces()
-        anfibios = zooAnimales.Anfibio.cantidadAnfibios()
+        mamiferos = zooAnimales.mamifero.Mamifero.cantidadMamiferos()
+        aves = zooAnimales.ave.Ave.cantidadAves()
+        reptiles = zooAnimales.reptil.Reptil.cantidadReptiles()
+        peces = zooAnimales.pez.Pez.cantidadPeces()
+        anfibios = zooAnimales.anfibio.Anfibio.cantidadAnfibios()
         # Agrega aquí los métodos para contar la cantidad de otros tipos de animales (Reptiles, Peces, Anfibios)
         return (f'Mamiferos: {mamiferos}\nAves: {aves}\nReptiles: {reptiles}\nPeces: {peces}\nAnfibios: {anfibios}')
 
