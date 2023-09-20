@@ -12,10 +12,20 @@ class Animal():
         self._zona = zona
         Animal._totalAnimales += 1
 
-    @staticmethod
-    def totalPorTipo():
-        return (f'Mamiferos: {zooAnimales.mamifero.Mamifero.cantidadMamiferos()}\nAves: {zooAnimales.ave.Ave.cantidadAves()}\nReptiles: {zooAnimales.reptil.Reptil.cantidadReptiles()}\nPeces: {zooAnimales.pez.Pez.cantidadPeces()}\nAnfibios: {zooAnimales.anfibio.Anfibio.cantidadAnfibios()}')
+    #@staticmethod
+    #def totalPorTipo():
+    #    return (f'Mamiferos: {zooAnimales.mamifero.Mamifero.cantidadMamiferos()}\nAves: {zooAnimales.ave.Ave.cantidadAves()}\nReptiles: {zooAnimales.reptil.Reptil.cantidadReptiles()}\nPeces: {zooAnimales.pez.Pez.cantidadPeces()}\nAnfibios: {zooAnimales.anfibio.Anfibio.cantidadAnfibios()}')
     
+    @classmethod
+    def totalPorTipo(cls):
+        mamiferos = zooAnimales.Mamifero.cantidadMamiferos()
+        aves = zooAnimales.Ave.cantidadAves()
+        reptiles = zooAnimales.Reptil.cantidadReptiles()
+        peces = zooAnimales.Pez.cantidadPeces()
+        anfibios = zooAnimales.Anfibio.cantidadAnfibios()
+        # Agrega aquí los métodos para contar la cantidad de otros tipos de animales (Reptiles, Peces, Anfibios)
+        return (f'Mamiferos: {mamiferos}\nAves: {aves}\nReptiles: {reptiles}\nPeces: {peces}\nAnfibios: {anfibios}')
+
     def toString(self):
         if self._zona is None:
             return(f'Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}') 

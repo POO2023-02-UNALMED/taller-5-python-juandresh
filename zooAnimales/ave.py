@@ -10,9 +10,13 @@ class Ave(Animal):
         super().__init__(nombre, edad, habitat, genero)
         self._colorPlumas = colorPlumas
 
+    #@classmethod
+    #def cantidadAves(cls):
+    #    return(len(cls._listado))
+    
     @classmethod
     def cantidadAves(cls):
-        return(len(cls._listado))
+        return cls.aguilas + cls.halcones
     
     @classmethod
     def crearHalcon(cls, nombre, edad, genero):

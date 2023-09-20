@@ -11,9 +11,13 @@ class Reptil(Animal):
         self._colorEscamas = colorEscamas
         self._largoCola = largoCola
 
+    #@classmethod
+    #def cantidadReptiles(cls):
+    #    return(len(cls._listado))
+
     @classmethod
     def cantidadReptiles(cls):
-        return(len(cls._listado))
+        return cls.iguanas + cls.serpientes
     
     @classmethod
     def crearIguana(cls, nombre, edad, genero):
