@@ -23,7 +23,7 @@ class Animal():
         reptiles = zooAnimales.reptil.Reptil.cantidadReptiles()
         peces = zooAnimales.pez.Pez.cantidadPeces()
         anfibios = zooAnimales.anfibio.Anfibio.cantidadAnfibios()
-        # Agrega aquí los métodos para contar la cantidad de otros tipos de animales (Reptiles, Peces, Anfibios)
+
         return (f'Mamiferos : {mamiferos}\nAves : {aves}\nReptiles : {reptiles}\nPeces : {peces}\nAnfibios : {anfibios}')
 
     def toString(self):
